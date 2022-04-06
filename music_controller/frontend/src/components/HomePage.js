@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import RoomJoinPage from './RoomJoinPage'
-import CreateRoomPage from './CreateRoomPage'
-import Room from './Room'
+import RoomJoinPage from './RoomJoinPage';
+import CreateRoomPage from './CreateRoomPage';
+import Room from './Room';
+import RoomList from "./RoomList";
 import { BrowserRouter as Router, Routes, Link, Route, Redirect } from "react-router-dom";
 
 export default class HomePage extends Component{
@@ -16,6 +17,7 @@ export default class HomePage extends Component{
                 <Route path='/join' element={<RoomJoinPage />}></Route>
                 <Route path='/create' element={<CreateRoomPage />}></Route>
                 <Route path='/room/:roomCode' element={<Room />}></Route>
+                <Route path='/list' element={<RoomList />}></Route>
             </Routes>
         </Router>
     }
